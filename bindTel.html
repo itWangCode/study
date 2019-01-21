@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>猴哥出行</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--header begin-->
+<header>
+    <div></div>
+    <div>绑定手机号</div>
+    <div></div>
+</header>
+<!--header end-->
+
+<!--tel begin-->
+<article class="bind-tel">
+    <section class="tel-number">
+        <label>手机号</label>
+        <input type="text" id="userTel" maxlength="11" name="phone" placeholder="请您输入手机号码" autofocus>
+    </section>
+
+    <section class="verification-code">
+        <label>验证码</label>
+        <input id="code" maxlength="6" name="search" class="ifFree" type="search" placeholder="请您输入验证码">
+        <div class="send-code">
+            <input id="btnSendCode" type="button" value="发送验证码" onClick="sendMessage()"/>
+        </div>
+    </section>
+
+    <section class="submit-btn-send">
+        <button type="button" class="submit-btn">确认</button>
+    </section>
+</article>
+<!--tel end-->
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bindTel.js"></script>
+
+</body>
+</html>

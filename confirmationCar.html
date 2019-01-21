@@ -1,0 +1,84 @@
+<!--
+    Created by wangyang on 2019-01-21.
+    itwangyang@gmail.com
+    http://itwangyang.xyz
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>猴哥出行</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color:#f0f0f0;">
+<!--header begin-->
+<header style="background-color: #fff;">
+    <div><img src="images/icon_returngreen.png"></div>
+    <div>确认用车</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</header>
+<!--header end-->
+
+
+<!--title begin-->
+<article class="title location-switch">
+    <div class="departure-city">厦门</div>
+    <div class="unit-price">￥55</div>
+    <div class="arrival-place">漳州市诏安县霞葛镇</div>
+</article>
+<!--title end-->
+
+
+<!--Carpool begin-->
+<article class=" carpool-place">
+    <section class="carpool">
+        <!--出发-->
+        <div class="carpool-setOff">
+            <div><img src="images/icon_heartgreen.png">
+                <label>上车地点</label><br>
+                <span>选择出发城市</span>
+            </div>
+            <div><img class="black" src="images/black.png"></div>
+        </div>
+
+        <!--到达-->
+        <div class="carpool-setOff carpool-arrivals">
+            <div><img src="images/icon_heartred.png">
+                <label>下车地点</label><br>
+                <span>选择目的地城市</span>
+            </div>
+            <div><img class="black" src="images/black.png"></div>
+        </div>
+
+        <!--人数-->
+        <div class="carpool-setOff">
+            <div>
+                <span>用车人数</span>
+            </div>
+            <div>
+                <select>
+                    <option>1人</option>
+                    <option>2人</option>
+                    <option>3人</option>
+                    <option>4人</option>
+                    <option>5人</option>
+                    <option>6人</option>
+                    <option>7人</option>
+                </select>
+            </div>
+        </div>
+
+    </section>
+</article>
+<!--Carpool end-->
+
+<script src="js/jquery.js"></script>
+<script src="js/bindTel.js"></script>
+
+</body>
+</html>
+

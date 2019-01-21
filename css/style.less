@@ -1,0 +1,419 @@
+/**
+ * Created by wangyang on 2019-01-20.
+ * itwangyang@gmail.com
+ * http://itwangyang.xyz
+ */
+
+@mainColor: #06a394;
+@headerH: .88rem;
+body {
+    position: relative;
+    overflow-x: hidden;
+    font-size: .30rem;
+    font-weight: bold;
+    color: #000 !important;
+    font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', Arial, sans-serif, "微软雅黑", "PingFang SC", Tahoma, Helvetica, Arial, sans-serif;
+}
+img{
+    vertical-align: middle;
+}
+input{
+    outline:none;
+}
+
+.header-font-size {
+    font-size: .36rem;
+    font-weight: bold;
+}
+
+.flexBox-space-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.flexBox-column-flex-start{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.flexBox-space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flexBox-center{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.flexBox-row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flexBox-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    height: @headerH+.2rem;
+    background-color: @mainColor;
+    .flexBox-space-between;
+
+    div {
+        .header-font-size;
+    }
+
+    div:nth-child(1) {
+        margin-left: .2rem;
+
+        img {
+            width: .4rem;
+            height: .4rem;
+            vertical-align: middle;
+        }
+    }
+
+    div:nth-child(3) {
+        margin-right: .2rem;
+
+    }
+}
+
+.bind-tel {
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    margin-top: -.2rem;
+    background-color: #fff;
+
+    .tel-number {
+        width: 7.1rem;
+        margin: 0 auto;
+        padding-top: .5rem;
+        height: 1.2rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.01rem solid #d3d3d3;
+        .flexBox-row;
+        label {
+            width: 1.2rem;
+        }
+        input{
+            outline: none;
+            height: 0.9rem;
+            color: #575757;
+        }
+    };
+
+    .verification-code {
+        .tel-number;
+        .send-code {
+            display: flex;
+            justify-content: flex-end;
+            #btnSendCode {
+                width: 1.83rem;
+                height: 0.6rem;
+                background-color: #fff;
+                font-size: 0.28rem;
+                text-align: center;
+                line-height: 0.59rem;
+                display: inline-flex;
+                -webkit-border-radius: 0.1rem;
+                border-radius: 0.1rem;
+                justify-content: center;
+                border: 0.01rem solid #d3d3d3;
+            }
+        }
+
+
+    };
+    .submit-btn-send{
+        .flexBox-center;
+        margin-top: 1.33rem;
+        .submit-btn{
+            width: 5rem;
+            height: 0.6rem;
+            background-color: @mainColor;
+            border-radius: .1rem;
+        }
+    }
+}
+
+//拼车
+.carpool-main{
+    width: 7.1rem;
+    height: 3.5rem;
+    border:.01rem solid #b4b4b4;
+    margin: 0 auto;
+    margin-top: .18rem;
+    margin-bottom: .18rem;
+    background-color: #fff;
+    .carpool{
+        padding: .36rem;
+        .carpool-setOff{
+            .flexBox-space-between;
+            height: .9rem;
+            align-items: center;
+            img{
+                vertical-align: middle;
+            }
+            img:nth-child(1){
+                 margin-right: .2rem;
+                 width: .37rem;
+                 height: 0.33rem;
+             }
+            img.black{
+                margin-right: .2rem;
+                width: .36rem;
+                height: 0.36rem;
+            }
+            span{
+                vertical-align: middle;
+            }
+        };
+        .submit-btn-send{
+            .flexBox-center;
+            margin-top: .33rem;
+            .submit-btn{
+                width: 5rem;
+                height: 0.6rem;
+                background-color: @mainColor;
+                border-radius: .1rem;
+            }
+        };
+
+    }
+}
+
+//叫车
+.tel-call{
+    height: .7rem;
+    background-color: #fff;
+    border-top: .01rem solid #d3d3d3;
+    border-bottom: .01rem solid #d3d3d3;
+    .flexBox-center;
+    img{
+        width: .44rem;
+        height: .44rem;
+        margin-left: .2rem;
+    }
+}
+
+//推荐路线
+.recommended-route{
+    width: 7.1rem;
+    margin: 0 auto;
+    p{
+        height: .7rem;
+        .flexBox-row;
+    }
+
+    aside{
+
+        .recommended-route-way-one{
+            border:.01rem solid #d3d3d3;
+            margin-bottom: .18rem;
+            padding: .36rem;
+            height: 2.2rem;
+            background-color: #fff;
+            .recommended-route-way-one-top{
+                .flexBox-space-between;
+                height: 1.1rem;
+            }
+            img{
+                margin-right: .2rem;
+                vertical-align: middle;
+            }
+            .carpool-btn{
+                width: 1.5rem;
+                height: .5rem;
+                background-color: @mainColor;
+                border-radius: .25rem;
+            }
+
+
+        }
+    }
+
+}
+
+/*出发*/
+.title{
+    height: 1.2rem;
+    background-color: @mainColor;
+    .flexBox-center;
+    font-size: .36rem;
+    color: #ffffff;
+}
+.address-way{
+    width: 7.1rem;
+    margin: 0 auto;
+    height: 100%;
+    border: .01rem solid #d3d3d3;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    background-color: #fff;
+    margin-top: -.2rem;
+    section:first-child{
+        margin-top: .5rem;
+    }
+    section{
+        width: 6.1rem;
+        height: .8rem;
+        margin: 0 auto;
+        .flexBox-column-flex-start;
+        border-bottom: .01rem solid #d3d3d3;
+        line-height: .8rem;
+        font-size: .3rem;
+        padding-left: .6rem;
+        cursor: pointer;
+    }
+
+}
+
+
+/*个人中心*/
+.person-info{
+    margin-top: .18rem;
+    background-color: #fff;
+    height: 100%;
+    .top-info{
+        .flexBox-column;
+        section:first-child{
+            margin-top: .6rem;
+            img{
+                width: 1.2rem;
+                height: 1.3rem;
+            }
+
+        }
+        section:nth-child(2){
+            margin: .4rem 0;
+            font-size: .36rem;
+        }
+
+        section:nth-child(3){
+            margin: 0 0 .9rem 0;
+            font-size: .36rem;
+        }
+    };
+    .setting{
+        section{
+            width: 6.9rem;
+            height: 1.02rem;
+            border-bottom: .01rem solid #d3d3d3;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-left: .6rem;
+            img{
+                width: .47rem;
+                height: .37rem;
+                margin-right: .25rem;
+            }
+            .set-img{
+                width: .45rem ;
+                height: .44rem ;
+            }
+            span{
+                font-size: .3rem;
+                a{
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+
+/*拼车成功*/
+.person-info{
+    margin-top: .18rem;
+    background-color: #fff;
+    height: 5rem;
+    border-radius: .3rem;
+    .carpool-success{
+        .flexBox-column;
+        section:first-child{
+            margin-top: .6rem;
+            img{
+                width: 2.03rem;
+                height: 1.78rem;
+            }
+
+        }
+        section:nth-child(2){
+            margin: .4rem 0;
+            font-size: .36rem;
+        }
+
+        section:nth-child(3){
+            margin: 0 0 .9rem 0;
+            font-size: .36rem;
+        }
+    };
+}
+
+/*确认用车*/
+.location-switch{
+    .unit-price{
+        width: 1rem;
+        text-align: center;
+        margin: 0 .31rem;
+        height: .5rem;
+        line-height: .5rem;
+        color: #000;
+        font-size: .3rem;
+        border-bottom: .05rem solid #000;
+    }
+}
+
+.carpool-place{
+    width: 7.1rem;
+    margin: 0 auto;
+    height: 100%;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    background-color: #fff;
+    margin-top: -.2rem;
+    .carpool{
+        padding: .3rem .3rem .1rem .3rem;
+        .carpool-setOff{
+            .flexBox-space-between;
+            height: .9rem;
+            margin: .4rem 0;
+            img{
+                vertical-align: middle;
+            }
+            img:nth-child(1){
+                margin-right: .2rem;
+                width: .37rem;
+                height: 0.33rem;
+            }
+            img.black{
+                margin-right: .2rem;
+                width: .36rem;
+                height: .36rem;
+            }
+            label{
+                color: #808080;
+                font-size: .28rem;
+            }
+            span{
+                vertical-align: middle;
+                margin-left: .7rem;
+                font-size: .3rem;
+            }
+        };
+
+    };
+    .carpool-arrivals{
+        margin-top: .1;
+        border-bottom: .01rem solid #d3d3d3;
+    }
+}
