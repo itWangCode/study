@@ -414,4 +414,27 @@ header div:nth-child(3) {
   width: 0.36rem;
   height: 0.36rem;
 }
+.carpool-place .carpool .go-time {
+  border-bottom: 0.01rem solid #d3d3d3;
+}
+.carpool-place .carpool .total-price {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 0.36rem;
+}
+.carpool-place .carpool .submit-btn-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.2rem;
+}
+.carpool-place .carpool .submit-btn-send .submit-btn {
+  width: 5rem;
+  height: 0.6rem;
+  background-color: #06a394;
+  border-radius: 0.1rem;
+}
 /*# sourceMappingURL=style.css.map */
