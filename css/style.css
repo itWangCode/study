@@ -447,4 +447,22 @@ header div:nth-child(3) {
   font-size: 0.36rem;
   color: #ffffff;
 }
+.choose-location div:nth-child(1) {
+  margin-left: 0.2rem;
+}
+.choose-location div:nth-child(1) a {
+  color: #000;
+  font-size: 0.3rem;
+}
+.choose-location div:nth-child(1) a img {
+  width: 0.28rem;
+  height: 0.37rem;
+}
+.choose-location div:nth-child(3) {
+  margin-right: 0.2rem;
+}
+.choose-location div:nth-child(3) a {
+  color: #000;
+  font-size: 0.3rem;
+}
 /*# sourceMappingURL=style.css.map */

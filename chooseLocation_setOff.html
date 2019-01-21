@@ -12,7 +12,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>猴哥出行</title>
     <link rel="stylesheet" href="css/reset.css">
-    <!--<link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body style="background-color:#f0f0f0;">
@@ -27,9 +26,9 @@
 
 <!--title begin-->
 <article class="choose-location">
-    <div><img src="images/icon_location.png"><a href="map.html"> <span id="info"></span></a></div>
+    <div><a href="map.html"><img src="images/icon_location.png"> <span id="info"></span></a></div>
     <div>您在哪儿上车</div>
-    <div>取消</div>
+    <div><a href="confirmationCar.html">取消</a> </div>
 </article>
 <!--title end-->
 
@@ -42,19 +41,12 @@
 </article>
 <!--address end-->
 
+<div id="container" class="map"></div>
+
 
 
 
 <script src="js/jquery.js"></script>
-
-<script>
-
-</script>
-
-
-
-
-<div id="container" class="map"></div>
 
 <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=d5a852c09f0ed49c76818a08f7b20828&plugin=AMap.CitySearch"></script>
 <script type="text/javascript">

@@ -4,14 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-    <title>输入提示后查询</title>
+    <title>猴哥出行</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
     <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=d5a852c09f0ed49c76818a08f7b20828&plugin=AMap.Autocomplete,AMap.PlaceSearch"></script>
     <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+
 <div id="container"></div>
-<div id="myPageTop">
+<div id="myPageTop" style="height: 2rem">
     <table>
         <tr>
             <td>
@@ -20,7 +24,14 @@
         </tr>
         <tr>
             <td>
-                <input id="tipinput"/>
+                <input id="tipinput" style="height: .6rem;border: .01rem solid #d3d3d3;margin: .2rem;padding-left: .1rem"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="text-align: center">
+                <button style="width: 1.5rem;height: .6rem;background: #06a394;border-radius: .15rem">确认</button>
+                <button style="width: 1.5rem;height: .6rem;border: .01rem solid #06a394; background: #fff;border-radius: .15rem"><a style="color: #06a394" href="chooseLocation_setOff.html">返回</a> </button>
             </td>
         </tr>
     </table>
