@@ -1,0 +1,93 @@
+<!--
+    Created by wangyang on 2019-01-21.
+    itwangyang@gmail.com
+    http://itwangyang.xyz
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>猴哥出行</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-color:#f0f0f0;">
+<!--header begin-->
+<header style="background-color: #fff;border-bottom: .01rem solid #b4b4b4">
+    <div><img src="images/icon_my.png"></div>
+    <div>猴哥出行</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</header>
+<!--header end-->
+
+
+<!--Carpool begin-->
+<article class="carpool-main">
+    <section class="carpool">
+        <!--出发-->
+        <div class="carpool-setOff">
+            <div><img src="images/icon_heartgreen.png"><span>选择出发城市</span></div>
+            <div><img class="black" src="images/black.png"></div>
+        </div>
+
+        <!--到达-->
+        <div class="carpool-setOff carpool-arrivals">
+            <div><img src="images/icon_heartred.png"><span>选择目的地城市</span></div>
+            <div><img class="black" src="images/black.png"></div>
+        </div>
+
+        <!--拼车-->
+        <section class="submit-btn-send">
+            <button class="submit-btn" style="font-size: .3rem">拼车</button>
+        </section>
+    </section>
+</article>
+<!--Carpool end-->
+
+<!--tel call begin-->
+<article class="tel-call">
+    <a href="tel:15985802782">电话叫车一键拨打</a><span><img src="images/icon_phonegreen.png"></span>
+</article>
+<!--tel call end-->
+
+
+<!--推荐路线 begin-->
+<article class="recommended-route">
+    <aside>
+        <p>推荐路线</p>
+        <section class="recommended-route-way-one">
+            <div class="recommended-route-way-one-top">
+                <div><img src="images/icon_dotgreen.png" style="width: 0.72rem;height: 0.72rem;"><span>厦门市</span></div>
+            <div>55元/位</div>
+            </div>
+            <div class="recommended-route-way-one-top">
+                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span>漳州市诏安县秀篆镇</span></div>
+                <div><button class="carpool-btn" type="button" style="font-size: .3rem">拼车</button></div>
+            </div>
+
+        </section>
+        <section class="recommended-route-way-one recommended-route-way-two">
+            <div class="recommended-route-way-one-top">
+                <div><img src="images/icon_dotgreen.png" style="width: 0.72rem;height: 0.72rem;"><span>漳州市诏安县秀篆镇</span></div>
+                <div>55元/位</div>
+            </div>
+            <div class="recommended-route-way-one-top">
+                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span> 厦门市 </span></div>
+                <div><button class="carpool-btn" type="button" style="font-size: .3rem">拼车</button></div>
+            </div>
+
+        </section>
+    </aside>
+</article>
+<!--推荐路线 end-->
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bindTel.js"></script>
+
+</body>
+</html>

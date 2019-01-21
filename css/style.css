@@ -371,7 +371,7 @@ header div:nth-child(3) {
   margin-top: -0.2rem;
 }
 .carpool-place .carpool {
-  padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+  padding: 0.3rem 0.3rem 0.3rem 0.3rem;
 }
 .carpool-place .carpool .carpool-setOff {
   display: flex;
@@ -402,8 +402,16 @@ header div:nth-child(3) {
   margin-left: 0.7rem;
   font-size: 0.3rem;
 }
-.carpool-place .carpool-arrivals {
-  margin-top: 0.1;
-  border-bottom: 0.01rem solid #d3d3d3;
+.carpool-place .carpool .person-number {
+  justify-content: space-between;
+  height: 1rem;
+  border-top: 0.01rem solid #d3d3d3;
+  display: flex;
+  align-items: center;
+}
+.carpool-place .carpool .person-number img.black {
+  margin-right: 0.2rem;
+  width: 0.36rem;
+  height: 0.36rem;
 }
 /*# sourceMappingURL=style.css.map */
