@@ -119,20 +119,6 @@
 <script src="js/mobiscroll_005.js" type="text/javascript"></script>
 <script src="js/confirmationCar.js"></script>
 
-<script>
-    function show_sub() {
-        //alert($("#test").find("option:selected").attr("value"));//原生
-        //console.log($("#test").find("option:selected").val());//加入jq库
-        var perNum = $("#test").find("option:selected").val();
-        var unitPrice = $(".unit-price-money").text();
-        console.log(unitPrice);
-        console.log(perNum);
-        $(".number-of-people").text(perNum+"人");
-        var zongjia = unitPrice * perNum;
-        console.log(zongjia);
-        $(".total").text("共"+zongjia+"元");
-    }
-</script>
 
 </body>
 </html>

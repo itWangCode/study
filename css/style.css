@@ -429,12 +429,22 @@ header div:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.2rem;
+  margin-top: 0.38rem;
 }
 .carpool-place .carpool .submit-btn-send .submit-btn {
   width: 5rem;
   height: 0.6rem;
   background-color: #06a394;
   border-radius: 0.1rem;
+}
+/*选择地点*/
+.choose-location {
+  height: 1.2rem;
+  background-color: #06a394;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.36rem;
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
