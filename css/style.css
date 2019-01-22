@@ -465,4 +465,90 @@ header div:nth-child(3) {
   color: #000;
   font-size: 0.3rem;
 }
+/*我的行程*/
+.my-itinerary {
+  height: 100%;
+}
+.my-itinerary .my-itinerary-one {
+  background-color: #fff;
+  margin-top: -0.2rem;
+  border-radius: 0.3rem;
+  height: 5.8rem;
+  margin-bottom: 0.4rem;
+}
+.my-itinerary .my-itinerary-one .carpool {
+  padding: 0.36rem;
+}
+.my-itinerary .my-itinerary-one .carpool .carpool-setOff {
+  display: flex;
+  justify-content: space-between;
+  height: 0.9rem;
+  align-items: center;
+}
+.my-itinerary .my-itinerary-one .carpool .carpool-setOff img {
+  vertical-align: middle;
+}
+.my-itinerary .my-itinerary-one .carpool .carpool-setOff img:nth-child(1) {
+  margin-right: 0.2rem;
+  width: 0.37rem;
+  height: 0.33rem;
+}
+.my-itinerary .my-itinerary-one .carpool .carpool-setOff img.black {
+  margin-right: 0.2rem;
+  width: 0.36rem;
+  height: 0.36rem;
+}
+.my-itinerary .my-itinerary-one .carpool .carpool-setOff span {
+  vertical-align: middle;
+}
+.my-itinerary .my-itinerary-one .carpool .submit-btn-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.33rem;
+}
+.my-itinerary .my-itinerary-one .carpool .submit-btn-send .submit-btn {
+  width: 5rem;
+  height: 0.6rem;
+  background-color: #06a394;
+  border-radius: 0.1rem;
+}
+.my-itinerary .my-itinerary-one .carpool .person-number {
+  padding: 0 0.68rem;
+  justify-content: space-between;
+  height: 0.7rem;
+  border-top: 0.01rem solid #d3d3d3;
+  display: flex;
+  align-items: center;
+}
+.my-itinerary .my-itinerary-one .carpool .person-number img.black {
+  margin-right: 0.2rem;
+  width: 0.36rem;
+  height: 0.36rem;
+}
+.my-itinerary .my-itinerary-one .carpool .go-time {
+  padding: 0 0.68rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 0.7rem;
+  border-bottom: 0.01rem solid #d3d3d3;
+}
+.my-itinerary .my-itinerary-one .carpool .amount {
+  padding: 0 0 0 0.68rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1.2rem;
+}
+.my-itinerary .my-itinerary-one .carpool .amount span {
+  font-size: 0.36rem;
+}
+.my-itinerary .my-itinerary-one .carpool .amount .carpool-btn {
+  outline: none;
+  width: 1.5rem;
+  height: 0.5rem;
+  background-color: #06a394;
+  border-radius: 0.25rem;
+}
 /*# sourceMappingURL=style.css.map */

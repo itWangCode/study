@@ -475,3 +475,84 @@ header {
         }
     }
 }
+
+/*我的行程*/
+.my-itinerary{
+    height: 100%;
+    .my-itinerary-one{
+        background-color: #fff;
+        margin-top: -.2rem;
+        border-radius: .3rem;
+        height: 5.8rem;
+        margin-bottom: .4rem;
+        .carpool{
+            padding: .36rem;
+            .carpool-setOff{
+                .flexBox-space-between;
+                height: .9rem;
+                align-items: center;
+                img{
+                    vertical-align: middle;
+                }
+                img:nth-child(1){
+                    margin-right: .2rem;
+                    width: .37rem;
+                    height: 0.33rem;
+                }
+                img.black{
+                    margin-right: .2rem;
+                    width: .36rem;
+                    height: 0.36rem;
+                }
+                span{
+                    vertical-align: middle;
+                }
+            };
+            .submit-btn-send{
+                .flexBox-center;
+                margin-top: .33rem;
+                .submit-btn{
+                    width: 5rem;
+                    height: 0.6rem;
+                    background-color: @mainColor;
+                    border-radius: .1rem;
+                }
+            };
+            .person-number{
+                padding:0 0.68rem ;
+                .flexBox-space-between;
+                height: .7rem;
+                border-top: .01rem solid #d3d3d3;
+                display: flex;
+                align-items: center;
+                img.black{
+                    margin-right: .2rem;
+                    width: .36rem;
+                    height: .36rem;
+                }
+            }
+            .go-time{
+                padding:0 0.68rem ;
+                .flexBox-space-between;
+                height: .7rem;
+                border-bottom: .01rem solid #d3d3d3;
+            }
+            .amount{
+                padding:0  0   0 0.68rem;
+                .flexBox-space-between;
+                height: 1.2rem;
+                span{
+                    font-size: .36rem;
+                }
+                .carpool-btn{
+                    outline: none;
+                    width: 1.5rem;
+                    height: .5rem;
+                    background-color: @mainColor;
+                    border-radius: .25rem;
+                }
+            }
+
+        }
+    }
+}
