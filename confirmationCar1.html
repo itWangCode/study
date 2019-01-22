@@ -33,7 +33,7 @@
 <article class="title location-switch">
     <div class="departure-city">厦门</div>
     <div class="unit-price">￥<span class="unit-price-money">55</span></div>
-    <div class="arrival-place">漳州市诏安县霞葛镇</div>
+    <div class="arrival-place">漳州市诏安县秀篆镇</div>
 </article>
 <!--title end-->
 
@@ -45,7 +45,7 @@
         <div class="carpool-setOff">
             <div><img src="images/icon_heartgreen.png">
                 <label>上车地点</label><br>
-                <span id="chufacity">选择出发城市</span>
+                <span id="chufacity">厦门市</span>
             </div>
             <div><a href="setOff.html"><img class="black" src="images/black.png"></a></div>
         </div>
@@ -54,7 +54,7 @@
         <div class="carpool-setOff carpool-arrivals">
             <div><img src="images/icon_heartred.png">
                 <label>下车地点</label><br>
-                <span id="daodacity">选择目的地城市</span>
+                <span id="daodacity">漳州市诏安县秀篆镇</span>
             </div>
             <div><a href="arrivals.html"><img class="black" src="images/black.png"></a></div>
         </div>
@@ -69,6 +69,7 @@
             </div>
             <div>
                 <select id="test" onchange="show_sub()">
+                    <option>请选人数</option>
                     <option value="1">1人</option>
                     <option value="2">2人</option>
                     <option value="3">3人</option>
@@ -85,10 +86,10 @@
                 <span>用车人数</span>
             </div>
             <div>
-                <input value="" placeholder="请您点击选择出发时间" class="" readonly="readonly" name="appDateTime" id="appDateTime" type="text">
+                <input value="请您选择出发时间" class="" readonly="readonly" name="appDateTime" id="appDateTime" type="text">
             </div>
             <div>
-                <!--<img class="black" src="images/black.png">-->
+                <img class="black" src="images/black.png">
             </div>
         </div>
 
@@ -120,77 +121,7 @@
 <script src="js/confirmationCar.js"></script>
 
 
-<script>
-    $(function () {
-        $(".departure-city,#chufacity").html(localStorage.getItem("chufa"));
-        $(".arrival-place,#daodacity").html(localStorage.getItem("daoda"));
-    });
-</script>
 
-
-<script>
-
-    $(function () {
-        var perNum = $("#test").find("option:selected").val()?$("#test").find("option:selected").val():"1";
-        var unitPrice = $(".unit-price-money").text();
-        var zongjia = unitPrice * perNum;
-        console.log(perNum);
-        console.log(unitPrice);
-        console.log(zongjia);
-        $(".number-of-people").text(perNum+"人");
-        $(".total").text("共"+zongjia+"元");
-        console.log($("#appDateTime").val());
-    });
-
-    $(".submit-btn").click(function () {
-        var chufacity =  $("#chufacity").text();
-        var daodacity = $("#daodacity").text();
-        console.log(chufacity);
-        console.log(daodacity);
-        var perNum = $("#test").find("option:selected").val();
-        // console.log($("#test").is(":checked"));
-        // if($("#test").is(":checked") == true){
-        //     alert("选着人数");
-        // }
-        var unitPrice = $(".unit-price-money").text();
-        console.log(unitPrice);
-        console.log(perNum);
-        $(".number-of-people").text(perNum+"人");
-        var zongjia = unitPrice * perNum;
-        console.log(zongjia);
-        $(".total").text("共"+zongjia+"元");
-        console.log($("#appDateTime").val());
-        if ($("#appDateTime").val() == ""){
-            alert("选择时间");
-            $("#appDateTime").focus();
-        }
-
-        $.ajax({
-            type:'post',
-            url:'',
-            data:{
-                chufacity:$("#chufacity").text(),
-                daodacity:$("#daodacity").text(),
-                unitPrice:$(".unit-price-money").text(),
-                perNum:$("#test").find("option:selected").val(),
-                zongjia:unitPrice * perNum,
-                appDateTime:$("#appDateTime").val(),
-                orderTime:$(".orderTime").text()
-            },
-            success:function (data) {
-                $(".number-of-people").text(data.perNum+"人");
-                $(".total").text("共"+data.zongjia+"元");
-                window.location.href="carpoolSuccess.html"
-            },
-            error:function () {
-                alert("出错了！");
-            }
-        })
-    });
-
-
-
-</script>
 
 </body>
 </html>

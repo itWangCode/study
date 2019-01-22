@@ -17,7 +17,7 @@
 <body style="background: #f0f0f0">
 <!--header begin-->
 <header>
-    <div><img src="images/icon_returnwhite.png" alt=""></div>
+    <div class="black-js"><img src="images/icon_returnwhite.png" alt=""></div>
     <div>我的行程</div>
     <div></div>
 </header>
@@ -26,8 +26,8 @@
 <!--my-itinerary begin-->
 <article class="my-itinerary">
     <section class="my-itinerary-one">
-        <section class="carpool">
-            <!--已发布-->
+        <!--<section class="carpool">
+            &lt;!&ndash;已发布&ndash;&gt;
             <div class="carpool-setOff">
                 <div><img src="images/icon_time.png">
                     <span>2019年1月20日  12-20</span>
@@ -35,21 +35,21 @@
                 <div><span>已发布</span></div>
             </div>
 
-            <!--出发-->
+            &lt;!&ndash;出发&ndash;&gt;
             <div class="carpool-setOff">
                 <div><img src="images/icon_heartgreen.png">
                     <span>选择出发城市</span>
                 </div>
             </div>
 
-            <!--到达-->
+            &lt;!&ndash;到达&ndash;&gt;
             <div class="carpool-setOff carpool-arrivals">
                 <div><img src="images/icon_heartred.png">
                     <span>选择目的地城市</span>
                 </div>
             </div>
 
-            <!--人数-->
+            &lt;!&ndash;人数&ndash;&gt;
             <div class=" person-number">
                 <div>
                     <span>用车人数</span>
@@ -59,7 +59,7 @@
                 </div>
             </div>
 
-            <!--出发时间-->
+            &lt;!&ndash;出发时间&ndash;&gt;
             <div class="go-time">
                 <div>
                     <span>出发时间</span>
@@ -70,7 +70,7 @@
 
             </div>
 
-            <!--金额-->
+            &lt;!&ndash;金额&ndash;&gt;
             <div class="amount">
                 <div>
                     <span>金额</span>
@@ -82,7 +82,7 @@
                     <button class="carpool-btn">取消</button>
                 </div>
             </div>
-        </section>
+        </section>-->
     </section>
     <section class="my-itinerary-one">
         <section class="carpool">
@@ -97,7 +97,7 @@
             <!--已完成-->
             <div class="carpool-setOff">
                 <div><img src="images/icon_time.png">
-                    <span>2019年1月20日  12-20</span>
+                    <span class="orderTime" ></span>
                 </div>
             </div>
 
@@ -156,8 +156,119 @@
 
 
 <script src="js/jquery.js"></script>
-<script src="js/bindTel.js"></script>
+<script src="js/common.js"></script>
+<script>
 
+
+   /* $(function () {
+        var html = "";
+        $.get("", function (data, status) {
+            for (var i = 0; i < data.data.length; i++) {
+                html +=
+                    '<li class="mui-table-view-cell">'
+                    + '<img src="' + data.data[i].url + '">' + data.data[i].data
+                    + '</li>'
+            }
+            $(".my-itinerary-one").html(html)
+
+        })
+    })*/
+
+    $(function () {
+        $.ajax({
+            url: '',
+            type: 'post',
+            dataTypt: 'json',
+            timeout: '1000',
+            cache: 'false',
+            error: erryFunction,
+            success: succFunction
+        });
+
+        function erryFunction() {
+            alert("请求错误");
+        }
+
+        var tt = "{\"时间\":\"2018\"}";
+        function succFunction(tt) {
+            var jsData = JSON.stringify(tt);//parse
+            if (jsData.status == 0) {
+                var data = jsData.data;
+                var html = '';
+                for (var i in data) {
+                   console.log(data[i]);
+                    html += '<section class="carpool">\n' +
+                        '            <!--已发布-->\n' +
+                        '            <div class="carpool-setOff">\n' +
+                        '                <div><img src="images/icon_time.png">\n' +
+                        '                    <span>data[i].appDateTime</span>\n' +
+                        '                </div>\n' +
+                        '                <div><span class="fabu">已发布</span></div>\n' +
+                        '            </div>\n' +
+                        '\n' +
+                        '            <!--出发-->\n' +
+                        '            <div class="carpool-setOff">\n' +
+                        '                <div><img src="images/icon_heartgreen.png">\n' +
+                        '                    <span>data[i].chufacity</span>\n' +
+                        '                </div>\n' +
+                        '            </div>\n' +
+                        '\n' +
+                        '            <!--到达-->\n' +
+                        '            <div class="carpool-setOff carpool-arrivals">\n' +
+                        '                <div><img src="images/icon_heartred.png">\n' +
+                        '                    <span>data[i].daodacity</span>\n' +
+                        '                </div>\n' +
+                        '            </div>\n' +
+                        '\n' +
+                        '            <!--人数-->\n' +
+                        '            <div class=" person-number">\n' +
+                        '                <div>\n' +
+                        '                    <span>用车人数</span>\n' +
+                        '                </div>\n' +
+                        '                <div>\n' +
+                        '                    data[i].perNum人\n' +
+                        '                </div>\n' +
+                        '            </div>\n' +
+                        '\n' +
+                        '            <!--出发时间-->\n' +
+                        '            <div class="go-time">\n' +
+                        '                <div>\n' +
+                        '                    <span>出发时间</span>\n' +
+                        '                </div>\n' +
+                        '                <div>\n' +
+                        '                    data[i].appDateTime\n' +
+                        '                </div>\n' +
+                        '\n' +
+                        '            </div>\n' +
+                        '\n' +
+                        '            <!--金额-->\n' +
+                        '            <div class="amount">\n' +
+                        '                <div>\n' +
+                        '                    <span>金额</span>\n' +
+                        '                </div>\n' +
+                        '                <div>\n' +
+                        '                    data[i].zongjia元\n' +
+                        '                </div>\n' +
+                        '                <div>\n' +
+                        '                    <button class="carpool-btn">取消</button>\n' +
+                        '                </div>\n' +
+                        '            </div>\n' +
+                        '        </section>';
+                }
+                $(".fabu").text(function(){
+                    if(data.data.hpType == 1)return "已发布";
+                    if(data.data.hpType == 2)return "已完成";
+                });
+                var oContent = $('.my-itinerary-one');
+                oContent.html(html);
+            } else {
+                alert('报错');
+            }
+        }
+    });
+
+
+</script>
 </body>
 </html>
 

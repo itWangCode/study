@@ -28,16 +28,20 @@
 <article class="carpool-main">
     <section class="carpool">
         <!--出发-->
-        <div class="carpool-setOff">
-            <div><img src="images/icon_heartgreen.png"><span id="chufa">选择出发城市</span></div>
-            <div><a href="setOff.html"> <img class="black" src="images/black.png"></a></div>
-        </div>
+        <a href="setOff.html">
+            <div class="carpool-setOff">
+                <div><img src="images/icon_heartgreen.png"><span id="chufa">选择出发城市</span></div>
+                <div><img class="black" src="images/black.png"></div>
+            </div>
+        </a>
 
         <!--到达-->
-        <div class="carpool-setOff carpool-arrivals">
-            <div><img src="images/icon_heartred.png"><span id="daoda">选择目的地城市</span></div>
-            <div><a href="arrivals.html"> <img class="black" src="images/black.png"></a></div>
-        </div>
+        <a href="arrivals.html">
+            <div class="carpool-setOff carpool-arrivals">
+                <div><img src="images/icon_heartred.png"><span id="daoda">选择目的地城市</span></div>
+                <div><img class="black" src="images/black.png"></div>
+            </div>
+        </a>
 
         <!--拼车-->
         <section class="submit-btn-send">
@@ -62,13 +66,15 @@
         <p>推荐路线</p>
         <section class="recommended-route-way-one">
             <div class="recommended-route-way-one-top">
-                <div><img src="images/icon_dotgreen.png" style="width: 0.72rem;height: 0.72rem;"><span id="xiamen1">厦门市</span></div>
+                <div><img src="images/icon_dotgreen.png" style="width: 0.72rem;height: 0.72rem;"><span
+                        id="xiamen1">厦门市</span></div>
                 <div>55元/位</div>
             </div>
             <div class="recommended-route-way-one-top">
-                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span id="xiu1">漳州市诏安县秀篆镇</span>
+                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span
+                        id="xiu1">漳州市诏安县秀篆镇</span>
                 </div>
-                <div><a href="confirmationCar.html">
+                <div><a href="confirmationCar1.html">
                     <button id="pincheWay1" class="carpool-btn" type="button" style="font-size: .3rem">拼车</button>
                 </a></div>
             </div>
@@ -81,8 +87,9 @@
                 <div>55元/位</div>
             </div>
             <div class="recommended-route-way-one-top">
-                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span id="xiamen2"> 厦门市 </span></div>
-                <div><a href="confirmationCar.html">
+                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span
+                        id="xiamen2"> 厦门市 </span></div>
+                <div><a href="confirmationCar2.html">
                     <button id="pincheWay2" class="carpool-btn" type="button" style="font-size: .3rem">拼车</button>
                 </a></div>
             </div>
@@ -94,23 +101,21 @@
 
 
 <script src="js/jquery.js"></script>
+<script src="js/common.js"></script>
 
 <script charset="utf-8">
-    $(function () {
-        $("#chufa").html(localStorage.getItem("chufa"));
-        $("#daoda").html(localStorage.getItem("daoda"));
-    });
-
     $("#pinche").click(function () {
         var chufaObj = $("#chufa").text();
         var daodaObj = $("#daoda").text();
         console.log(chufaObj);
         console.log(daodaObj);
-        localStorage.setItem("chufaObj",chufaObj);
-        localStorage.setItem("daodaObj",daodaObj);
+        localStorage.setItem("chufaObj", chufaObj);
+        localStorage.setItem("daodaObj", daodaObj);
     });
-
-
+    $(function () {
+        $("#chufa").html(localStorage.getItem("chufa")?localStorage.getItem("chufa"):'选择出发城市');
+        $("#daoda").html(localStorage.getItem("daoda")?localStorage.getItem("daoda"):'选择目的地城市');
+    })
 
 </script>
 </body>
