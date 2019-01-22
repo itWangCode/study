@@ -45,18 +45,18 @@
         <div class="carpool-setOff">
             <div><img src="images/icon_heartgreen.png">
                 <label>上车地点</label><br>
-                <span>选择出发城市</span>
+                <span id="chufacity">选择出发城市</span>
             </div>
-            <div><img class="black" src="images/black.png"></div>
+            <div><a href="setOff.html"><img class="black" src="images/black.png"></a></div>
         </div>
 
         <!--到达-->
         <div class="carpool-setOff carpool-arrivals">
             <div><img src="images/icon_heartred.png">
                 <label>下车地点</label><br>
-                <span>选择目的地城市</span>
+                <span id="daodacity">选择目的地城市</span>
             </div>
-            <div><img class="black" src="images/black.png"></div>
+            <div><a href="arrivals.html"><img class="black" src="images/black.png"></a></div>
         </div>
 
         <!--人数-->
@@ -119,6 +119,13 @@
 <script src="js/mobiscroll_005.js" type="text/javascript"></script>
 <script src="js/confirmationCar.js"></script>
 
+
+<script>
+    $(function () {
+        $(".departure-city,#chufacity").html(localStorage.getItem("chufa"));
+        $(".arrival-place,#daodacity").html(localStorage.getItem("daoda"));
+    });
+</script>
 
 </body>
 </html>

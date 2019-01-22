@@ -41,7 +41,34 @@
 
 
 <script src="js/jquery.js"></script>
-<script src="js/bindTel.js"></script>
+<script>
+    // window.onload = function(){
+    //     var obj_lis = document.querySelector(".address-way").getElementsByTagName("section");
+    //     for(i=0;i<obj_lis.length;i++){
+    //         obj_lis[i].onclick = function(){
+    //             //alert(this.innerText);
+    //             var objList = this.innerText;
+    //             console.log(objList);
+    //
+    //         }
+    //     }
+    // }
+
+    var chufa;
+    $(".address-way>section").click(function(){
+        alert($(this).text());
+        chufa  = $(this).text();
+        //window.sessionStorage.setItem("chufa",chufa);
+        localStorage.setItem("chufa",$(this).text());
+        //window.location.href="index.html";//本地页面跳转
+        window.history.back();
+    });
+
+
+
+
+
+</script>
 
 </body>
 </html>

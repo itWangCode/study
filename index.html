@@ -17,7 +17,7 @@
 <body style="background-color:#f0f0f0;">
 <!--header begin-->
 <header style="background-color: #fff;border-bottom: .01rem solid #b4b4b4">
-    <div><img src="images/icon_my.png"></div>
+    <div><a href="personalCenter.html"> <img src="images/icon_my.png"></a></div>
     <div>猴哥出行</div>
     <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 </header>
@@ -29,19 +29,21 @@
     <section class="carpool">
         <!--出发-->
         <div class="carpool-setOff">
-            <div><img src="images/icon_heartgreen.png"><span>选择出发城市</span></div>
-            <div><img class="black" src="images/black.png"></div>
+            <div><img src="images/icon_heartgreen.png"><span id="chufa">选择出发城市</span></div>
+            <div><a href="setOff.html"> <img class="black" src="images/black.png"></a></div>
         </div>
 
         <!--到达-->
         <div class="carpool-setOff carpool-arrivals">
-            <div><img src="images/icon_heartred.png"><span>选择目的地城市</span></div>
-            <div><img class="black" src="images/black.png"></div>
+            <div><img src="images/icon_heartred.png"><span id="daoda">选择目的地城市</span></div>
+            <div><a href="arrivals.html"> <img class="black" src="images/black.png"></a></div>
         </div>
 
         <!--拼车-->
         <section class="submit-btn-send">
-            <button class="submit-btn" style="font-size: .3rem">拼车</button>
+            <a href="confirmationCar.html">
+                <button class="submit-btn" id="pinche" style="font-size: .3rem">拼车</button>
+            </a>
         </section>
     </section>
 </article>
@@ -60,23 +62,29 @@
         <p>推荐路线</p>
         <section class="recommended-route-way-one">
             <div class="recommended-route-way-one-top">
-                <div><img src="images/icon_dotgreen.png" style="width: 0.72rem;height: 0.72rem;"><span>厦门市</span></div>
-            <div>55元/位</div>
+                <div><img src="images/icon_dotgreen.png" style="width: 0.72rem;height: 0.72rem;"><span id="xiamen1">厦门市</span></div>
+                <div>55元/位</div>
             </div>
             <div class="recommended-route-way-one-top">
-                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span>漳州市诏安县秀篆镇</span></div>
-                <div><button class="carpool-btn" type="button" style="font-size: .3rem">拼车</button></div>
+                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span id="xiu1">漳州市诏安县秀篆镇</span>
+                </div>
+                <div><a href="confirmationCar.html">
+                    <button id="pincheWay1" class="carpool-btn" type="button" style="font-size: .3rem">拼车</button>
+                </a></div>
             </div>
 
         </section>
         <section class="recommended-route-way-one recommended-route-way-two">
             <div class="recommended-route-way-one-top">
-                <div><img src="images/icon_dotgreen.png" style="width: 0.72rem;height: 0.72rem;"><span>漳州市诏安县秀篆镇</span></div>
+                <div><img src="images/icon_dotgreen.png" style="width: 0.72rem;height: 0.72rem;"><span class="xiu2">漳州市诏安县秀篆镇</span>
+                </div>
                 <div>55元/位</div>
             </div>
             <div class="recommended-route-way-one-top">
-                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span> 厦门市 </span></div>
-                <div><button class="carpool-btn" type="button" style="font-size: .3rem">拼车</button></div>
+                <div><img src="images/icon_dotred.png" style="width: 0.72rem;height: 0.72rem;"><span id="xiamen2"> 厦门市 </span></div>
+                <div><a href="confirmationCar.html">
+                    <button id="pincheWay2" class="carpool-btn" type="button" style="font-size: .3rem">拼车</button>
+                </a></div>
             </div>
 
         </section>
@@ -85,9 +93,25 @@
 <!--推荐路线 end-->
 
 
-
 <script src="js/jquery.js"></script>
-<script src="js/bindTel.js"></script>
 
+<script charset="utf-8">
+    $(function () {
+        $("#chufa").html(localStorage.getItem("chufa"));
+        $("#daoda").html(localStorage.getItem("daoda"));
+    });
+
+    $("#pinche").click(function () {
+        var chufaObj = $("#chufa").text();
+        var daodaObj = $("#daoda").text();
+        console.log(chufaObj);
+        console.log(daodaObj);
+        localStorage.setItem("chufaObj",chufaObj);
+        localStorage.setItem("daodaObj",daodaObj);
+    });
+
+
+
+</script>
 </body>
 </html>

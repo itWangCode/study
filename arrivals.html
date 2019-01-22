@@ -31,7 +31,7 @@
 <!--title end-->
 
 <!--address begin-->
-<article class="address-way">
+<article class="address-way arrivals">
     <section>厦门市</section>
     <section>漳州市</section>
     <section>漳州市诏安县秀篆镇</section>
@@ -40,10 +40,18 @@
 <!--address end-->
 
 
-
-
 <script src="js/jquery.js"></script>
+<script>
+    var daoda;
+        $(".arrivals>section").click(function () {
+            alert($(this).text());
+            daoda = $(this).text();
+            localStorage.setItem("daoda",$(this).text());
+            //window.location.href="index.html";//本地页面跳转
+            window.history.back();
 
+        });
+</script>
 </body>
 </html>
 

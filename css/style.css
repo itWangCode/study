@@ -3,6 +3,9 @@
  * itwangyang@gmail.com
  * http://itwangyang.xyz
  */
+a {
+  color: #000;
+}
 body {
   position: relative;
   overflow-x: hidden;
@@ -14,6 +17,7 @@ body {
 img {
   vertical-align: middle;
 }
+button,
 input {
   outline: none;
 }
@@ -324,29 +328,29 @@ header div:nth-child(3) {
   color: #000;
 }
 /*拼车成功*/
-.person-info {
+.person-info1 {
   margin-top: 0.18rem;
   background-color: #fff;
   height: 5rem;
   border-radius: 0.3rem;
 }
-.person-info .carpool-success {
+.person-info1 .carpool-success {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.person-info .carpool-success section:first-child {
+.person-info1 .carpool-success section:first-child {
   margin-top: 0.6rem;
 }
-.person-info .carpool-success section:first-child img {
+.person-info1 .carpool-success section:first-child img {
   width: 2.03rem;
   height: 1.78rem;
 }
-.person-info .carpool-success section:nth-child(2) {
+.person-info1 .carpool-success section:nth-child(2) {
   margin: 0.4rem 0;
   font-size: 0.36rem;
 }
-.person-info .carpool-success section:nth-child(3) {
+.person-info1 .carpool-success section:nth-child(3) {
   margin: 0 0 0.9rem 0;
   font-size: 0.36rem;
 }
@@ -473,7 +477,7 @@ header div:nth-child(3) {
   background-color: #fff;
   margin-top: -0.2rem;
   border-radius: 0.3rem;
-  height: 5.8rem;
+  height: 6.3rem;
   margin-bottom: 0.4rem;
 }
 .my-itinerary .my-itinerary-one .carpool {
@@ -539,7 +543,7 @@ header div:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 1.2rem;
+  height: 0.9rem;
 }
 .my-itinerary .my-itinerary-one .carpool .amount span {
   font-size: 0.36rem;
