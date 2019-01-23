@@ -51,6 +51,7 @@ $("#userTel").blur(function () {
             type: "post",
             data: {
                 "phone": tel123,
+                "code":code,
             },
             success: function (data) {
                 console.log(JSON.stringify(data));
@@ -60,7 +61,7 @@ $("#userTel").blur(function () {
                     $("#btnSendCode").css("background-color", "#d3d3d3");
                 } else if (data.code == 200) {
                     $("#btnSendCode").removeAttr("disabled");
-                    $("#btnSendCode").css("background-color", "#1e81d2");
+                    $("#btnSendCode").css("background-color", "#d3d3d3");
                 }
             },
             error: function () {
